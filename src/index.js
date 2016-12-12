@@ -12,7 +12,7 @@ import type { AsyncStorage } from './types';
 
 const API: AsyncStorage = {
   getItem: (key) => {
-    return Promise.resolve(window.localStorage.getItem(key)),
+    return Promise.resolve(window.localStorage.getItem(key));
   },
   setItem: (key, value) => {
     return new Promise((resolve) => {

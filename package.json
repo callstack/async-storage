@@ -4,7 +4,7 @@
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
   "main": "src/index.js",
   "scripts": {
-    "test": "flow src"
+    "test": "flow src && eslint src"
   },
   "repository": {
     "type": "git",
