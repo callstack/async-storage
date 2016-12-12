@@ -9,7 +9,8 @@ In order to use it, just import from either web or native:
 import AsyncStorage from '@callstack/async-storage';
 ```
 
-and call any of the methods available [here](https://facebook.github.io/react-native/docs/asyncstorage.html).
+and call any of the methods available [here](https://facebook.github.io/react-native/docs/asyncstorage.html). The API is 100% compatible,
+including the errors that can be thrown.
 
 ```js
 AsyncStorage.setItem('key', 'value')
@@ -18,9 +19,3 @@ AsyncStorage.setItem('key', 'value')
 ```
 
 **Warning:** Unlike React Native AsyncStorage, this module doesn't accept callbacks. If you are already using Promises or async/await, this warning can be ignored.
-
-**Implemented methods:**
-- [x] setItem
-- [x] getItem
-- [x] clear
-- [x] getAllKeys
