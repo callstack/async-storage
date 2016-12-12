@@ -1,5 +1,5 @@
 /**
- * index.ios.js
+ * types.js
  * react-native-cross-platform-storage
  *
  * Created by Mike Grabowski on 12/12/16.
@@ -8,4 +8,9 @@
  * @flow
  */
 
-export { default } from './index.mobile';
+/**
+ * Describes `AsyncStorage` interface as in React Native
+ */
+type AsyncStorage = {
+
+};

@@ -8,4 +8,4 @@
  * @flow
  */
 
-export default from './index.mobile';
+export { default } from './index.mobile';

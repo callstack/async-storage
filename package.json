@@ -1,8 +1,11 @@
 {
-  "name": "react-native-cross-platform-storage",
+  "name": "@callstack/react-native-cross-platform-storage",
   "version": "1.0.0",
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
   "main": "src/index.js",
+  "scripts": {
+    "test": "flow src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/callstack-io/react-native-cross-platform-storage.git"
@@ -12,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/callstack-io/react-native-cross-platform-storage/issues"
   },
-  "homepage": "https://github.com/callstack-io/react-native-cross-platform-storage#readme"
+  "homepage": "https://github.com/callstack-io/react-native-cross-platform-storage#readme",
+  "devDependencies": {
+    "flow-bin": "^0.36.0"
+  }
 }
