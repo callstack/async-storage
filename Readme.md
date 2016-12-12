@@ -9,7 +9,7 @@ In order to use it, just import from either web or native:
 import AsyncStorage from '@callstack/async-storage';
 ```
 
-and call any of the methods available [here](https://facebook.github.io/react-native/docs/asyncstorage.html), e.g:
+and call any of the methods available [here](https://facebook.github.io/react-native/docs/asyncstorage.html).
 
 ```js
 AsyncStorage.setItem('key', 'value')
@@ -17,7 +17,7 @@ AsyncStorage.setItem('key', 'value')
   .catch(() => {})
 ```
 
-You will need to transpile that module with Babel because of `flow` type definitions. If you are running React Native, you can ignore that as it's done automatically for you.
+**Note:** This module discards historically supported `callbacks` in favour of Promises.
 
 **Implemented methods:**
 - [x] setItem
