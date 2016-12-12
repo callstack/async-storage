@@ -8,6 +8,18 @@
  * @flow
  */
 
-// @todo write web
+import type { AsyncStorage } from './types';
 
-export default {};
+const API: AsyncStorage = {
+  getItem: (key) => {
+    return Promise.resolve(window.localStorage.getItem(key)),
+  },
+  setItem: (key, value) => {
+    return new Promise((resolve) => {
+      window.localStorage.setItem(key, value);
+      resolve();
+    });
+  },
+};
+
+export default API;

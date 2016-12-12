@@ -12,5 +12,6 @@
  * Describes `AsyncStorage` interface as in React Native
  */
 type AsyncStorage = {
-
+  setItem: (key: string, value: string) => Promise<void>,
+  getItem: (key: string) => Promise<?string>,
 };
