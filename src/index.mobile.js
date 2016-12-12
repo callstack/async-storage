@@ -24,6 +24,9 @@ const API: TAsyncStorage = {
   getAllKeys: () => {
     return AsyncStorage.getAllKeys();
   },
+  multiGet: (keys) => {
+    return AsyncStorage.multiGet(keys);
+  },
 };
 
 export default API;

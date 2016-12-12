@@ -16,4 +16,5 @@ export type TAsyncStorage = {
   getItem: (key: string) => Promise<?string>,
   clear: () => Promise <void>,
   getAllKeys: () => Promise<Array<string>>,
+  multiGet: (keys: Array<string>) => Promise<Array<[string, string]>>,
 };

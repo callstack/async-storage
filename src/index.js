@@ -31,6 +31,14 @@ const API: TAsyncStorage = {
       resolve(Object.keys(localStorage));
     });
   },
+  multiGet: (keys) => {
+    return new Promise((resolve) => {
+      const keyValues = keys.reduce(
+        (acc, key) => acc.concat([key, localStorage.getItem(key)]),
+        [],
+      );
+    });
+  },
 };
 
 export default API;
