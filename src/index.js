@@ -34,7 +34,7 @@ const API: TAsyncStorage = {
   multiGet: (keys) => {
     return new Promise((resolve) => {
       const keyValues = keys.reduce(
-        (acc, key) => acc.concat([key, localStorage.getItem(key)]),
+        (acc, key) => acc.concat([[key, localStorage.getItem(key)]]),
         [],
       );
       resolve(keyValues);
