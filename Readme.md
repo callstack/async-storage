@@ -17,7 +17,7 @@ AsyncStorage.setItem('key', 'value')
   .catch(() => {})
 ```
 
-**Note:** This module discards historically supported `callbacks` in favour of Promises.
+**Warning:** Unlike React Native AsyncStorage, this module doesn't accept callbacks. If you are already using Promises or async/await, this warning can be ignored.
 
 **Implemented methods:**
 - [x] setItem
