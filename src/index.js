@@ -26,6 +26,11 @@ const API: TAsyncStorage = {
       resolve();
     });
   },
+  getAllKeys: () => {
+    return new Promise((resolve) => {
+      resolve(Object.keys(localStorage));
+    });
+  },
 };
 
 export default API;

@@ -23,3 +23,4 @@ AsyncStorage.setItem('key', 'value')
 - [x] setItem
 - [x] getItem
 - [x] clear
+- [x] getAllKeys
