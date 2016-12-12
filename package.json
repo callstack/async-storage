@@ -1,0 +1,16 @@
+{
+  "name": "react-native-cross-platform-storage",
+  "version": "1.0.0",
+  "description": "Cross platform storage for React Native and Web, built on top of React Native",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callstack-io/react-native-cross-platform-storage.git"
+  },
+  "author": "Mike Grabowski <grabbou@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callstack-io/react-native-cross-platform-storage/issues"
+  },
+  "homepage": "https://github.com/callstack-io/react-native-cross-platform-storage#readme"
+}
