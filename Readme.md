@@ -17,6 +17,8 @@ AsyncStorage.setItem('key', 'value')
   .catch(() => {})
 ```
 
+You will need to transpile that module with Babel because of `flow` type definitions. If you are running React Native, you can ignore that as it's done automatically for you.
+
 **Implemented methods:**
 - [x] setItem
 - [x] getItem
