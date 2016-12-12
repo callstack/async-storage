@@ -1,16 +1,22 @@
 @callstack/async-storage
 ==================================
 
-> Cross platform AsyncStorage with React Native - like API.
+> Cross platform local storage with React Native - like API.
 
-Just import from either web environment or native environment and:
+In order to use it, just import from either web or native:
 
 ```js
 import AsyncStorage from '@callstack/async-storage';
+```
 
+and call any of the methods available [here](https://facebook.github.io/react-native/docs/asyncstorage.html), e.g:
+
+```js
 AsyncStorage.setItem('key', 'value')
   .then(() => {})
   .catch(() => {})
 ```
 
-Full API can be seen here: https://facebook.github.io/react-native/docs/asyncstorage.html
+**Implemented methods:**
+- [x] setItem
+- [x] getItem
