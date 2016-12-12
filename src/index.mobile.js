@@ -8,5 +8,16 @@
  * @flow
  */
 
-// @todo add flow here
-export { AsyncStorage as default } from 'react-native';
+import { AsyncStorage } from 'react-native';
+import type { TAsyncStorage } from './types';
+
+const API: TAsyncStorage = {
+  getItem: (key) => {
+    return AsyncStorage.getItem(key);
+  },
+  setItem: (key, value) => {
+    return AsyncStorage.setItem(key, value);
+  },
+};
+
+export default API;

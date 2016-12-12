@@ -8,9 +8,9 @@
  * @flow
  */
 
-import type { AsyncStorage } from './types';
+import type { TAsyncStorage } from './types';
 
-const API: AsyncStorage = {
+const API: TAsyncStorage = {
   getItem: (key) => {
     return Promise.resolve(window.localStorage.getItem(key));
   },

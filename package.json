@@ -16,6 +16,9 @@
     "url": "https://github.com/callstack-io/react-native-cross-platform-storage/issues"
   },
   "homepage": "https://github.com/callstack-io/react-native-cross-platform-storage#readme",
+  "peerDependencies": {
+    "react-native": "*"
+  },
   "devDependencies": {
     "babel-eslint": "~7.1.1",
     "eslint": "~3.12.0",

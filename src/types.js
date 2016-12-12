@@ -11,7 +11,7 @@
 /**
  * Describes `AsyncStorage` interface as in React Native
  */
-export type AsyncStorage = {
+export type TAsyncStorage = {
   setItem: (key: string, value: string) => Promise<void>,
   getItem: (key: string) => Promise<?string>,
 };
