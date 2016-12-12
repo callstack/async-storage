@@ -37,6 +37,7 @@ const API: TAsyncStorage = {
         (acc, key) => acc.concat([key, localStorage.getItem(key)]),
         [],
       );
+      resolve(keyValues);
     });
   },
 };
