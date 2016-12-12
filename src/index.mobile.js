@@ -21,7 +21,7 @@ const API: TAsyncStorage = {
   clear: () => {
     return AsyncStorage.clear();
   },
-  getAllKeys() => {
+  getAllKeys: () => {
     return AsyncStorage.getAllKeys();
   },
 };
