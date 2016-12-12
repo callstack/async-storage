@@ -18,6 +18,9 @@ const API: TAsyncStorage = {
   setItem: (key, value) => {
     return AsyncStorage.setItem(key, value);
   },
+  clear: () => {
+    return AsyncStorage.clear();
+  },
 };
 
 export default API;

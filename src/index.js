@@ -20,6 +20,12 @@ const API: TAsyncStorage = {
       resolve();
     });
   },
+  clear: () => {
+    return new Promise((resolve) => {
+      window.localStorage.clear();
+      resolve();
+    });
+  },
 };
 
 export default API;

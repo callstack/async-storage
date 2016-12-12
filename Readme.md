@@ -22,3 +22,4 @@ AsyncStorage.setItem('key', 'value')
 **Implemented methods:**
 - [x] setItem
 - [x] getItem
+- [x] clear
