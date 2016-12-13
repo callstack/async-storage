@@ -41,6 +41,7 @@ module.name_mapper='^react-native' -> 'emptyObject'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
+suppress_type=$FlowIgnore
 suppress_type=$FixMe
 
 unsafe.enable_getters_and_setters=true

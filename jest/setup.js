@@ -1,5 +1,5 @@
 /**
- * localStorageMock.js
+ * setup.js
  * react-native-cross-platform-storage
  *
  * Created by Ferran Negre on 13/12/16.
@@ -10,6 +10,7 @@
 
 const createLocalStorage = () => {
   const store = {};
+
   // $FlowFixMe https://github.com/facebook/flow/issues/285
   Object.defineProperties(store, {
     getItem: {
@@ -41,8 +42,8 @@ const createLocalStorage = () => {
       },
     },
   });
+
   return store;
 };
 
-const localStorageMock = createLocalStorage();
-export default localStorageMock;
+window.localStorage = createLocalStorage();

@@ -10,22 +10,25 @@
     "src/index.mobile.js",
     "src/types.js"
   ],
-  "scripts": {
-    "test": "jest",
-    "lint": "eslint src",
-    "flow": "flow src",
-    "integration": "flow src && eslint src && jest"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/callstack-io/react-native-cross-platform-storage.git"
   },
-  "author": "Mike Grabowski <grabbou@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/callstack-io/react-native-cross-platform-storage/issues"
   },
   "homepage": "https://github.com/callstack-io/react-native-cross-platform-storage#readme",
+  "author": "Mike Grabowski <grabbou@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src",
+    "flow": "flow src",
+    "jest": "jest",
+    "test": "flow src && eslint src && jest"
+  },
+  "dependencies": {
+    "lodash.merge": "^4.6.0"
+  },
   "peerDependencies": {
     "react-native": "*"
   },
@@ -44,7 +47,9 @@
     "flow-bin": "^0.36.0",
     "jest": "^17.0.3"
   },
-  "dependencies": {
-    "lodash.merge": "^4.6.0"
+  "jest": {
+    "setupFiles": [
+      "jest/setup.js"
+    ]
   }
 }
