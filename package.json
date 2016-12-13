@@ -1,6 +1,6 @@
 {
   "name": "@callstack/async-storage",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
   "main": "src",
   "files": [
