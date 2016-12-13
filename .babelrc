@@ -1,4 +1,8 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["transform-async-to-generator", "babel-plugin-transform-flow-strip-types"]
+  "env": {
+    "test": {
+      "presets": ["es2015"],
+      "plugins": ["transform-async-to-generator", "babel-plugin-transform-flow-strip-types"]
+    }
+  }
 }

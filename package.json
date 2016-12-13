@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
   "main": "src",
+  "files": [
+    "src/index.android.js",
+    "src/index.ios.js",
+    "src/index.js",
+    "src/index.mobile.js",
+    "src/types.js"
+  ],
   "scripts": {
     "test": "jest",
     "lint": "eslint src",
