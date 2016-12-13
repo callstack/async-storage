@@ -4,7 +4,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true,
+    "jest": true,
     "es6": true
   },
 
@@ -36,6 +36,7 @@
     "no-restricted-syntax": 0,
     "no-underscore-dangle": 0,
     "no-use-before-define": 0,
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
 
     "import/no-duplicates": 0,
     "import/no-unresolved": 0,

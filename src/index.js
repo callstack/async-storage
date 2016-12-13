@@ -75,10 +75,9 @@ const API: TAsyncStorage = {
         }
 
         try {
-          const parsedValue = JSON.parse(rawValue);
           localStorage.setItem(
             key,
-            merge(parsedValue, value),
+            JSON.stringify(merge(JSON.parse(rawValue), JSON.parse(value))),
           );
         } catch (error) {
           errors.push(error);
@@ -87,7 +86,7 @@ const API: TAsyncStorage = {
 
       return errors.length > 0
         ? reject(errors)
-        : resolve;
+        : resolve();
     });
   },
   multiRemove: (keys) => {
