@@ -5,20 +5,10 @@ aliases:
       # Fallback in case checksum fails
       - dependencies-
 
-  - &restore-website-cache
-    keys:
-      - dependencies-website-{{ checksum "website/package.json" }}
-      - dependencies-website-
-
   - &save-cache
     paths:
       - node_modules
     key: dependencies-{{ checksum "package.json" }}
-
-  - &save-website-cache
-    paths:
-      - website/node_modules
-    key: dependencies-website-{{ checksum "website/package.json" }}
 
 version: 2
 jobs:
@@ -28,15 +18,10 @@ jobs:
     steps:
       - checkout
       - restore-cache: *restore-cache
-      - restore-cache: *restore-website-cache
-      - run: |
-          yarn install
-          cd website && yarn install && yarn build && cd ..
+      - run: yarn install
       - save-cache: *save-cache
-      - save-cache: *save-website-cache
       - run: yarn run lint
       - run: yarn run flow
       - run: yarn test -- --coverage
-      - run: cat ./coverage/lcov.info | ./node_modules/.bin/codecov
       - store_artifacts:
           path: coverage
