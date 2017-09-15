@@ -38,8 +38,6 @@
     "babel-core": "6.26.0",
     "babel-eslint": "~7.1.1",
     "babel-jest": "*",
-    "babel-plugin-transform-async-to-generator": "^6.16.0",
-    "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
     "babel-preset-flow": "^6.23.0",
