@@ -36,23 +36,23 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
-    "babel-eslint": "~7.1.1",
-    "babel-jest": "*",
+    "babel-eslint": "8.0.0",
+    "babel-jest": "21.0.2",
     "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.6.0",
-    "babel-preset-flow": "^6.23.0",
+    "babel-preset-flow": "6.23.0",
     "cpx": "1.5.0",
-    "eslint": "~3.12.0",
-    "eslint-config-airbnb": "~13.0.0",
-    "eslint-plugin-import": "~2.2.0",
-    "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "~6.8.0",
-    "flow-bin": "^0.36.0",
-    "jest": "^17.0.3"
+    "eslint": "4.7.0",
+    "eslint-config-callstack-io": "0.4.1",
+    "flow-bin": "0.54.1",
+    "jest": "21.1.0"
   },
   "jest": {
     "setupFiles": [
       "jest/setup.js"
     ]
+  },
+  "eslintConfig": {
+    "extends": "callstack-io"
   }
 }
