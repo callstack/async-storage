@@ -1,0 +1,25 @@
+{
+  "extends": "callstack-io",
+  "env": {
+    "jest": true
+  },
+
+  "globals": {
+    "__DEV__": true
+  },
+
+  "rules": {
+    "strict": 0,
+
+    "import/no-duplicates": 0,
+    "import/no-unresolved": 0,
+
+    "react/jsx-no-bind": 0,
+    "react/jsx-filename-extension": 0,
+    "react/forbid-prop-types": 0,
+    "react/prefer-stateless-function": 0,
+    "react/sort-comp": 0,
+
+    "jsx-a11y/href-no-hash": "off"
+  }
+}

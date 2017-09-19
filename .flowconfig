@@ -16,6 +16,7 @@
 .*/node_modules/commoner/test/source/widget/share.js
 .*/node_modules/fbemitter/node_modules/.*
 .*/node_modules/react-native/.*
+.*/node_modules/metro-bundler/.*
 .*/node_modules/jest-runtime/build/__tests__/.*
 
 <PROJECT_ROOT>/example/.*
