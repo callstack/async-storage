@@ -49,10 +49,24 @@
   },
   "jest": {
     "setupFiles": [
-      "jest/setup.js"
+      "./jest/setup.js"
     ]
   },
   "eslintConfig": {
-    "extends": "callstack-io"
+    "extends": "callstack-io",
+    "rules": {
+      "import/no-unresolved": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".android.js",
+            ".ios.js"
+          ]
+        }
+      }
+    }
   }
 }

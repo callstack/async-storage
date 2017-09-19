@@ -64,10 +64,12 @@ describe('AsyncStorage', () => {
     await AsyncStorage.setItem('k1', JSON.stringify({ v1: 'foo' }));
     await AsyncStorage.mergeItem('k1', JSON.stringify({ v2: 'bar' }));
 
-    expect(await AsyncStorage.getItem('k1')).toEqual(JSON.stringify({
-      v1: 'foo',
-      v2: 'bar',
-    }));
+    expect(await AsyncStorage.getItem('k1')).toEqual(
+      JSON.stringify({
+        v1: 'foo',
+        v2: 'bar',
+      })
+    );
   });
 
   test('multiMerge', async () => {
@@ -78,14 +80,18 @@ describe('AsyncStorage', () => {
       ['k2', JSON.stringify({ v2: 'bar' })],
     ]);
 
-    expect(await AsyncStorage.getItem('k1')).toEqual(JSON.stringify({
-      v1: 'foo',
-      v2: 'bar',
-    }));
-    expect(await AsyncStorage.getItem('k2')).toEqual(JSON.stringify({
-      v1: 'foo',
-      v2: 'bar',
-    }));
+    expect(await AsyncStorage.getItem('k1')).toEqual(
+      JSON.stringify({
+        v1: 'foo',
+        v2: 'bar',
+      })
+    );
+    expect(await AsyncStorage.getItem('k2')).toEqual(
+      JSON.stringify({
+        v1: 'foo',
+        v2: 'bar',
+      })
+    );
   });
 });
 
