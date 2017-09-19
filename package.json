@@ -31,7 +31,7 @@
     "lodash.merge": "^4.6.0"
   },
   "peerDependencies": {
-    "react-native": "*"
+    "react-native": "^0.38"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
