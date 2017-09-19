@@ -12,39 +12,17 @@ import { AsyncStorage } from 'react-native';
 import type { TAsyncStorage } from './types';
 
 const API: TAsyncStorage = {
-  getItem: (key) => {
-    return AsyncStorage.getItem(key);
-  },
-  setItem: (key, value) => {
-    return AsyncStorage.setItem(key, value);
-  },
-  clear: () => {
-    return AsyncStorage.clear();
-  },
-  getAllKeys: () => {
-    return AsyncStorage.getAllKeys();
-  },
-  multiGet: (keys) => {
-    return AsyncStorage.multiGet(keys);
-  },
-  removeItem: (key) => {
-    return AsyncStorage.removeItem(key);
-  },
-  mergeItem: (key) => {
-    return AsyncStorage.mergeItem(key);
-  },
-  flushGetRequests: () => {
-    return AsyncStorage.flushGetRequests();
-  },
-  multiSet: (kvPairs) => {
-    return AsyncStorage.multiSet(kvPairs);
-  },
-  multiRemove: (keys) => {
-    return AsyncStorage.multiRemove(keys);
-  },
-  multiMerge: (kvPairs) => {
-    return AsyncStorage.multiMerge(kvPairs);
-  },
+  getItem: key => AsyncStorage.getItem(key),
+  setItem: (key, value) => AsyncStorage.setItem(key, value),
+  clear: () => AsyncStorage.clear(),
+  getAllKeys: () => AsyncStorage.getAllKeys(),
+  multiGet: keys => AsyncStorage.multiGet(keys),
+  removeItem: key => AsyncStorage.removeItem(key),
+  mergeItem: key => AsyncStorage.mergeItem(key),
+  flushGetRequests: () => AsyncStorage.flushGetRequests(),
+  multiSet: kvPairs => AsyncStorage.multiSet(kvPairs),
+  multiRemove: keys => AsyncStorage.multiRemove(keys),
+  multiMerge: kvPairs => AsyncStorage.multiMerge(kvPairs),
 };
 
 export default API;

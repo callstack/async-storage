@@ -14,31 +14,23 @@ const createLocalStorage = () => {
   // $FlowFixMe https://github.com/facebook/flow/issues/285
   Object.defineProperties(store, {
     getItem: {
-      get: () => {
-        return (key: string) => store[key] || null;
-      },
+      get: () => (key: string) => store[key] || null,
     },
     setItem: {
-      get: () => {
-        return (key: string, value: string) => {
-          store[key] = value;
-        };
+      get: () => (key: string, value: string) => {
+        store[key] = value;
       },
     },
     removeItem: {
-      get: () => {
-        return (key: string) => {
-          delete store[key];
-        };
+      get: () => (key: string) => {
+        delete store[key];
       },
     },
     clear: {
-      get: () => {
-        return () => {
-          Object.keys(store).forEach((key: string) => {
-            store.removeItem(key);
-          });
-        };
+      get: () => () => {
+        Object.keys(store).forEach((key: string) => {
+          store.removeItem(key);
+        });
       },
     },
   });
