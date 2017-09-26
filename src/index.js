@@ -77,6 +77,7 @@ const API: TAsyncStorage = {
       resolve();
     }),
   flushGetRequests: () => {
+    // eslint-disable-next-line
     console.warn('AsyncStorage.flushGetRequests: Not supported on `web`');
   },
 };

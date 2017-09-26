@@ -38,7 +38,7 @@ experimental.strict_type_args=true
 
 munge_underscores=true
 
-module.name_mapper='^react-native' -> 'emptyObject'
+module.name_mapper='react-native' -> '<PROJECT_ROOT>/emptyStub.js'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
