@@ -1,3 +1,6 @@
+[![Version][version-badge]][package]
+[![Build Status][build-badge]][build]
+
 @callstack/async-storage
 ==================================
 
@@ -19,3 +22,10 @@ AsyncStorage.setItem('key', 'value')
 ```
 
 **Warning:** Unlike React Native AsyncStorage, this module doesn't accept callbacks. If you are already using Promises or async/await, this warning can be ignored.
+
+
+<!-- badges -->
+[version-badge]: https://img.shields.io/npm/v/@callstack/async-storage.svg?style=flat-square
+[package]: https://www.npmjs.com/package/@callstack/async-storage
+[build-badge]: https://img.shields.io/circleci/project/github/callstack/async-storage/master.svg?style=flat-square
+[build]: https://circleci.com/gh/callstack-io/async-storage
