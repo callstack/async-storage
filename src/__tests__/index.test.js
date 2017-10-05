@@ -10,7 +10,7 @@
 
 import AsyncStorage from '../';
 
-describe('AsyncStorage', () => {
+describe('AsyncStorage promises', () => {
   beforeEach(async () => {
     AsyncStorage.clear();
   });
@@ -95,7 +95,52 @@ describe('AsyncStorage', () => {
   });
 });
 
-describe('AsyncStorage errors', () => {
+describe('AsyncStorage callbacks', () => {
+  beforeEach(async () => {
+    AsyncStorage.clear();
+  });
+
+  test('setItem', done => {
+    AsyncStorage.setItem('k1', 'v1', err => {
+      expect(err).toBeNull();
+      done();
+    });
+  });
+
+  test('getItem', async done => {
+    const testValue = JSON.stringify({ v1: 'foo' });
+    await AsyncStorage.setItem('k1', testValue);
+
+    AsyncStorage.getItem('k1', (err, value) => {
+      expect(err).toBeNull();
+      expect(value).toEqual(testValue);
+      done();
+    });
+  });
+
+  test('removeItem', async done => {
+    await AsyncStorage.setItem('k1', JSON.stringify({ v1: 'foo' }));
+
+    AsyncStorage.removeItem('k1', (err, value) => {
+      expect(err).toBeNull();
+      expect(value).toEqual();
+      done();
+    });
+  });
+
+  test('removeItem', async done => {
+    await AsyncStorage.setItem('k1', JSON.stringify({ v1: 'foo' }));
+    await AsyncStorage.setItem('k2', JSON.stringify({ v2: 'boo' }));
+
+    AsyncStorage.getAllKeys((err, value) => {
+      expect(err).toBeNull();
+      expect(value).toEqual(['k1', 'k2']);
+      done();
+    });
+  });
+});
+
+describe.skip('AsyncStorage errors', () => {
   beforeEach(async () => {
     AsyncStorage.clear();
   });

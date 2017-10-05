@@ -10,21 +10,53 @@
 
 import merge from 'lodash.merge';
 
-import type { TAsyncStorage } from './types';
+import type { TAsyncStorage, Callback } from './types';
 
 const API: TAsyncStorage = {
-  getItem: key => API.multiGet([key]).then(values => values[0][1]),
-  setItem: (key, value) => API.multiSet([[key, value]]),
+  getItem: (key, cb?: Callback) =>
+    API.multiGet([key])
+      .then(values => values[0][1])
+      .then(data => {
+        cb && cb(null, data);
+        return data;
+      })
+      .catch(err => {
+        cb && cb(err, null);
+        return err;
+      }),
+  setItem: (key, value, cb?: Callback) =>
+    API.multiSet([[key, value]])
+      .then(data => {
+        cb && cb(null, data);
+        return data;
+      })
+      .catch(err => {
+        cb && cb(err, null);
+        return err;
+      }),
+  getAllKeys: (cb?: Callback) =>
+    Promise.resolve(Object.keys(localStorage))
+      .then(data => {
+        cb && cb(null, data);
+        return data;
+      })
+      .catch(err => {
+        cb && cb(err, null);
+        return err;
+      }),
+  removeItem: (key, cb?: Callback) =>
+    API.multiRemove([key])
+      .then(() => {
+        cb && cb(null);
+      })
+      .catch(err => {
+        cb && cb(err, null);
+      }),
   clear: () =>
     new Promise(resolve => {
       window.localStorage.clear();
       resolve();
     }),
-  getAllKeys: () =>
-    new Promise(resolve => {
-      resolve(Object.keys(localStorage));
-    }),
-  removeItem: key => API.multiRemove([key]),
   mergeItem: (key, value) => API.multiMerge([[key, value]]),
   multiGet: keys =>
     new Promise(resolve => {

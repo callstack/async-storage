@@ -8,19 +8,22 @@
  * @flow
  */
 
+export type Callback = (err: ?Error, value: any) => void;
+
 /**
  * Describes `AsyncStorage` interface as in React Native
  */
 export type TAsyncStorage = {|
-  setItem: (key: string, value: string) => Promise<void>,
-  getItem: (key: string) => Promise<?string>,
+  setItem: (key: string, value: string, cb?: Callback) => Promise<void>,
+  getItem: (key: string, cb?: Callback) => Promise<?string>,
+  getAllKeys: (cb?: Callback) => Promise<Array<string>>,
+  removeItem: (key: string, cb?: Callback) => Promise<void>,
+
   clear: () => Promise<void>,
-  getAllKeys: () => Promise<Array<string>>,
   multiGet: (keys: Array<string>) => Promise<Array<[string, ?string]>>,
   multiSet: (kvPairs: Array<[string, string]>) => Promise<void>,
   multiMerge: (kvPairs: Array<[string, string]>) => Promise<void>,
   multiRemove: (keys: Array<string>) => Promise<void>,
-  removeItem: (key: string) => Promise<void>,
   mergeItem: (key: string, value: string) => Promise<void>,
   flushGetRequests: () => void,
 |};

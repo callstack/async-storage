@@ -4,11 +4,11 @@
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
   "main": "lib",
   "files": [
-    "src/index.android.js",
-    "src/index.ios.js",
-    "src/index.js",
-    "src/index.mobile.js",
-    "src/types.js"
+    "lib/index.android.js",
+    "lib/index.ios.js",
+    "lib/index.js",
+    "lib/index.mobile.js",
+    "lib/types.js"
   ],
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   "scripts": {
     "lint": "eslint src",
     "flow": "flow src",
-    "build": "cpx \"src/*.js\" lib && babel src/index.js -o lib/index.js",
+    "build": "cpx \"src/**/!(*.test.js)\" lib && babel src/index.js -o lib/index.js",
     "jest": "jest",
     "test": "flow src && eslint src && jest"
   },

@@ -12,12 +12,13 @@ import { AsyncStorage } from 'react-native';
 import type { TAsyncStorage } from './types';
 
 const API: TAsyncStorage = {
-  getItem: key => AsyncStorage.getItem(key),
-  setItem: (key, value) => AsyncStorage.setItem(key, value),
+  getItem: (key, cb) => AsyncStorage.getItem(key, cb),
+  setItem: (key, value, cb) => AsyncStorage.setItem(key, value, cb),
+  removeItem: (key, cb) => AsyncStorage.removeItem(key, cb),
+  getAllKeys: cb => AsyncStorage.getAllKeys(cb),
+
   clear: () => AsyncStorage.clear(),
-  getAllKeys: () => AsyncStorage.getAllKeys(),
   multiGet: keys => AsyncStorage.multiGet(keys),
-  removeItem: key => AsyncStorage.removeItem(key),
   mergeItem: key => AsyncStorage.mergeItem(key),
   flushGetRequests: () => AsyncStorage.flushGetRequests(),
   multiSet: kvPairs => AsyncStorage.multiSet(kvPairs),
