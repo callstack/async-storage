@@ -7,7 +7,7 @@
 > Cross platform local storage with React Native - like API.
 
 
-Check out working example [here](https://codesandbox.io/s/r9l9ljr04) 💻
+Check out working [web example](https://codesandbox.io/s/r9l9ljr04) 💻 and [mobile](https://snack.expo.io/Bkoq9DabG) 📱
 
 In order to use it, just import from either web or native:
 
