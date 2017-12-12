@@ -6,6 +6,9 @@
 
 > Cross platform local storage with React Native - like API.
 
+
+Check out working example [here](https://codesandbox.io/s/r9l9ljr04) 💻
+
 In order to use it, just import from either web or native:
 
 ```js
@@ -25,9 +28,9 @@ AsyncStorage.setItem('key', 'value')
 
 Sice the version 1.1.0 we do support **callbacks** (along with promises) for methods `setItem`, `getItem`, `removeItem` and `getAllKeys`. That's mean that this library now plays well with e.g. [redux-persist](https://github.com/rt2zz/redux-persist). :rocket:
 
-
 <!-- badges -->
 [version-badge]: https://img.shields.io/npm/v/@callstack/async-storage.svg?style=flat-square
 [package]: https://www.npmjs.com/package/@callstack/async-storage
 [build-badge]: https://img.shields.io/circleci/project/github/callstack/async-storage/master.svg?style=flat-square
 [build]: https://circleci.com/gh/callstack-io/async-storage
+
