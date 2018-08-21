@@ -43,3 +43,6 @@ android/keystores/debug.keystore
 
 # Jest
 coverage/
+
+# build
+lib/
