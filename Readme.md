@@ -7,7 +7,7 @@
 > Cross platform local storage with React Native - like API.
 
 
-Check out working [web example](https://codesandbox.io/s/r9l9ljr04) 💻 and [mobile](https://snack.expo.io/BkQLv_p-z) 📱
+Check out working [web example](https://codesandbox.io/s/r9l9ljr04) 💻 and [mobile](https://snack.expo.io/@happiryu/@callstack-async-storage-example) 📱
 
 In order to use it, just import from either web or native:
 
