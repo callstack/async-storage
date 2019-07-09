@@ -1,15 +1,8 @@
 {
   "name": "@callstack/async-storage",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cross platform storage for React Native and Web, built on top of React Native",
-  "main": "lib",
-  "files": [
-    "lib/index.android.js",
-    "lib/index.ios.js",
-    "lib/index.js",
-    "lib/index.mobile.js",
-    "lib/types.js"
-  ],
+  "main": "src",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/callstack-io/react-native-cross-platform-storage.git"
