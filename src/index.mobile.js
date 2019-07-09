@@ -8,7 +8,7 @@
  * @flow
  */
 
-import { AsyncStorage } from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 import type { TAsyncStorage } from './types';
 
 const API: TAsyncStorage = {
