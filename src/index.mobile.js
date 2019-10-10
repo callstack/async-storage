@@ -19,8 +19,8 @@ const API: TAsyncStorage = {
 
   clear: () => AsyncStorage.clear(),
   multiGet: keys => AsyncStorage.multiGet(keys),
-  mergeItem: key => AsyncStorage.mergeItem(key),
-  flushGetRequests: () => AsyncStorage.flushGetRequests(),
+  mergeItem: (key, value: string) => AsyncStorage.mergeItem(key, value),
+  flushGetRequests: () => null,
   multiSet: kvPairs => AsyncStorage.multiSet(kvPairs),
   multiRemove: keys => AsyncStorage.multiRemove(keys),
   multiMerge: kvPairs => AsyncStorage.multiMerge(kvPairs),
